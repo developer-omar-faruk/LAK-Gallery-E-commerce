@@ -8,6 +8,8 @@ import TrendingProducts from "./components/TrendingProducts";
 import WhyUs from "./components/WhyUs";
 import Testimonials from "./components/Testimonials";
 import Brands from "./components/Brands";
+import Newsletter from "./components/Newsletter";
+import Contact from "./components/Contact";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -41,9 +43,9 @@ function App() {
       <WhyUs />
       <Testimonials />
       <Brands />
-      {/* <Newsletter />
+      <Newsletter />
       <Contact />
-      <Footer />
+      {/* <Footer />
       <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} cart={cart} onIncrease={increase} onDecrease={decrease} onRemove={remove} />
       <AnimatePresence>
         {selectedProduct && <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} onAddToCart={addToCart} />}
