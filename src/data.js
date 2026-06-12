@@ -1,3 +1,7 @@
+import { // for WhyUs
+  FiTruck, FiShield, FiAward, FiHeadphones,
+} from "react-icons/fi";
+
 // ─── DATA ────────────────────────────────────────────────────────────────────
 export const navLinks = [
   { id: 1, label: "Home", href: "#home" },
@@ -26,4 +30,20 @@ export const products = [
   { id: 6, name: "Luma Tote Bag", category: "Accessories", price: 89, originalPrice: 119, discount: 25, rating: 4.4, reviews: 167, image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80", description: "Handcrafted full-grain leather tote with interior organizer pockets and magnetic closure.", features: ["Full-grain Leather", "Magnetic Closure", "Interior Pockets", "Shoulder Strap", "2 Colors"], tag: "New" },
   { id: 7, name: "Drift Lounge Chair", category: "Furniture", price: 649, originalPrice: 849, discount: 24, rating: 4.8, reviews: 89, image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&q=80", description: "Scandinavian-inspired lounge chair with solid oak legs and premium bouclé upholstery.", features: ["Solid Oak Legs", "Bouclé Upholstery", "360° Swivel", "Ergonomic", "Assembly Included"], tag: "Best Seller" },
   { id: 8, name: "Pixel Smart Watch", category: "Watches", price: 299, originalPrice: 349, discount: 14, rating: 4.6, reviews: 334, image: "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=600&q=80", description: "Advanced smartwatch with health monitoring, GPS, and 7-day battery life in a sleek design.", features: ["Health Monitor", "Built-in GPS", "7-day Battery", "45mm AMOLED", "Always-on Display"], tag: "Hot" },
+];
+
+export const trendingProducts = [
+  { id: 101, name: "Studio Headphones", category: "Electronics", price: 349, originalPrice: 429, rating: 4.9, image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80", tag: "Trending #1" },
+  { id: 102, name: "Slim Leather Wallet", category: "Accessories", price: 65, originalPrice: 89, rating: 4.7, image: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600&q=80", tag: "Trending #2" },
+  { id: 103, name: "Urban Sneakers", category: "Shoes", price: 119, originalPrice: 149, rating: 4.8, image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600&q=80", tag: "Trending #3" },
+  { id: 104, name: "Marble Desk Lamp", category: "Furniture", price: 129, originalPrice: 169, rating: 4.6, image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=80", tag: "Trending #4" },
+  { id: 105, name: "Compact Camera", category: "Electronics", price: 799, originalPrice: 999, rating: 4.9, image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80", tag: "Trending #5" },
+];
+
+// whyus
+export const features = [
+  { id: 1, Icon: FiTruck, title: "Free Delivery", description: "On all orders above $99. Fast and reliable worldwide shipping.", color: "text-blue-500", bg: "bg-blue-50" },
+  { id: 2, Icon: FiShield, title: "Secure Payment", description: "256-bit SSL encryption. Your payment data is always safe.", color: "text-emerald-500", bg: "bg-emerald-50" },
+  { id: 3, Icon: FiAward, title: "Premium Quality", description: "Curated selection of the world's finest products.", color: "text-amber-500", bg: "bg-amber-50" },
+  { id: 4, Icon: FiHeadphones, title: "24/7 Support", description: "Round-the-clock expert customer service at your fingertips.", color: "text-violet-500", bg: "bg-violet-50" },
 ];
