@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -11,6 +12,9 @@ import Brands from "./components/Brands";
 import Newsletter from "./components/Newsletter";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import CartDrawer from "./components/funComponents/CartDrawer";
+import ProductModal from "./components/funComponents/ProductModal";
+import SearchOverlay from "./components/funComponents/SearchOverlay";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -47,11 +51,11 @@ function App() {
       <Newsletter />
       <Contact />
       <Footer />
-      {/* <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} cart={cart} onIncrease={increase} onDecrease={decrease} onRemove={remove} />
+      <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} cart={cart} onIncrease={increase} onDecrease={decrease} onRemove={remove} />
       <AnimatePresence>
         {selectedProduct && <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} onAddToCart={addToCart} />}
       </AnimatePresence>
-      <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} /> */}
+      <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </div>
   );
 }
