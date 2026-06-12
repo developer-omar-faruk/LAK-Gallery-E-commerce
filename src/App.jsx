@@ -6,6 +6,8 @@ import Categories from "./components/Categories";
 import FeaturedProducts from "./components/FeaturedProducts";
 import TrendingProducts from "./components/TrendingProducts";
 import WhyUs from "./components/WhyUs";
+import Testimonials from "./components/Testimonials";
+import Brands from "./components/Brands";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -37,9 +39,9 @@ function App() {
       <FeaturedProducts onAddToCart={addToCart} onView={setSelectedProduct} />
       <TrendingProducts onAddToCart={addToCart} onView={setSelectedProduct} />
       <WhyUs />
-      {/* <Testimonials />
+      <Testimonials />
       <Brands />
-      <Newsletter />
+      {/* <Newsletter />
       <Contact />
       <Footer />
       <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} cart={cart} onIncrease={increase} onDecrease={decrease} onRemove={remove} />

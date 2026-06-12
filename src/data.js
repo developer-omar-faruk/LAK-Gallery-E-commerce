@@ -47,3 +47,12 @@ export const features = [
   { id: 3, Icon: FiAward, title: "Premium Quality", description: "Curated selection of the world's finest products.", color: "text-amber-500", bg: "bg-amber-50" },
   { id: 4, Icon: FiHeadphones, title: "24/7 Support", description: "Round-the-clock expert customer service at your fingertips.", color: "text-violet-500", bg: "bg-violet-50" },
 ];
+
+export const testimonials = [
+  { id: 1, name: "Sophie Laurent", role: "Interior Designer", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80", rating: 5, text: "Absolutely love the quality. The Drift Lounge Chair exceeded every expectation — the craftsmanship is exceptional and delivery was flawless." },
+  { id: 2, name: "Marcus Chen", role: "Tech Entrepreneur", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80", rating: 5, text: "The Arc Pro Laptop is a game-changer. Unbelievable performance and the customer service team was incredibly helpful throughout." },
+  { id: 3, name: "Amara Osei", role: "Fitness Coach", avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&q=80", rating: 5, text: "Apex Runner X changed my morning runs completely. Lightweight, responsive, and they look amazing. Already ordered a second pair!" },
+  { id: 4, name: "Elena Vasquez", role: "Fashion Stylist", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80", rating: 4, text: "The Meridian Jacket is timeless. The quality of the wool blend and the tailoring is on par with luxury brands at a fraction of the price." },
+  { id: 5, name: "James Whitmore", role: "Photographer", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80", rating: 5, text: "Fast shipping, beautiful packaging, and the product quality is phenomenal. This is my go-to store for premium goods." },
+];
+
