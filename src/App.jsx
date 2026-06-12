@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Categories from "./components/Categories";
+import FeaturedProducts from "./components/FeaturedProducts";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -31,8 +32,8 @@ function App() {
       <Navbar cartCount={cartCount} onCartOpen={() => setCartOpen(true)} onSearchOpen={() => setSearchOpen(true)} />
       <Hero onShopClick={() => document.getElementById("featured")?.scrollIntoView({ behavior: "smooth" })} />
       <Categories />
-      {/* <FeaturedProducts onAddToCart={addToCart} onView={setSelectedProduct} />
-      <TrendingProducts onAddToCart={addToCart} onView={setSelectedProduct} />
+      <FeaturedProducts onAddToCart={addToCart} onView={setSelectedProduct} />
+      {/* <TrendingProducts onAddToCart={addToCart} onView={setSelectedProduct} />
       <WhyUs />
       <Testimonials />
       <Brands />
