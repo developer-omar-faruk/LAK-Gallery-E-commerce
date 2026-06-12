@@ -8,6 +8,15 @@ export const navLinks = [
   { id: 6, label: "Contact", href: "#contact" },
 ];
 
+export const categories = [
+  { id: 1, name: "Electronics", count: 124, emoji: "💻", color: "from-blue-500/20 to-indigo-500/20", border: "border-blue-200" },
+  { id: 2, name: "Fashion", count: 89, emoji: "👗", color: "from-pink-500/20 to-rose-500/20", border: "border-pink-200" },
+  { id: 3, name: "Shoes", count: 56, emoji: "👟", color: "from-amber-500/20 to-orange-500/20", border: "border-amber-200" },
+  { id: 4, name: "Watches", count: 43, emoji: "⌚", color: "from-slate-500/20 to-gray-500/20", border: "border-slate-200" },
+  { id: 5, name: "Accessories", count: 77, emoji: "👜", color: "from-violet-500/20 to-purple-500/20", border: "border-violet-200" },
+  { id: 6, name: "Furniture", count: 38, emoji: "🪑", color: "from-emerald-500/20 to-teal-500/20", border: "border-emerald-200" },
+];
+
 export const products = [
   { id: 1, name: "Arc Pro Laptop", category: "Electronics", price: 1299, originalPrice: 1599, discount: 19, rating: 4.8, reviews: 312, image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80", description: "Ultra-thin 14-inch laptop with M3 chip, 16GB RAM, and 512GB SSD.", features: ["M3 Chip", "16GB RAM", "512GB SSD", "Retina Display", "18hr Battery"], tag: "Best Seller" },
   { id: 2, name: "Meridian Jacket", category: "Fashion", price: 189, originalPrice: 249, discount: 24, rating: 4.6, reviews: 198, image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=80", description: "Premium wool-blend jacket with a tailored silhouette. Timeless design meets modern comfort.", features: ["Wool Blend", "Tailored Fit", "Dry Clean", "3 Colors", "S–XXL"], tag: "New" },

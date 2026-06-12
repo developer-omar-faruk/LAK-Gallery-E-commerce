@@ -1,15 +1,8 @@
 import { products } from "../data";
+import { fadeUp,stagger } from "./utilits/UTILS";
 
 import { motion } from "framer-motion";
 import { FiArrowRight, FiZap } from "react-icons/fi";
-
-
-// ─── UTILS ────────────────────────────────────────────────────────────────────
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] } }),
-};
-const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
 
 
 function Hero({ onShopClick }) {
