@@ -10,6 +10,7 @@ import Testimonials from "./components/Testimonials";
 import Brands from "./components/Brands";
 import Newsletter from "./components/Newsletter";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -45,8 +46,8 @@ function App() {
       <Brands />
       <Newsletter />
       <Contact />
-      {/* <Footer />
-      <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} cart={cart} onIncrease={increase} onDecrease={decrease} onRemove={remove} />
+      <Footer />
+      {/* <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} cart={cart} onIncrease={increase} onDecrease={decrease} onRemove={remove} />
       <AnimatePresence>
         {selectedProduct && <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} onAddToCart={addToCart} />}
       </AnimatePresence>
