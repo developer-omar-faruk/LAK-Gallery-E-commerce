@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 
-const brands = ["Apple", "Nike", "Sony", "Samsung", "Adidas", "Dyson", "Bose", "Leica", "Bang & Olufsen", "Hermès"];
+const brands = ["Apple", "Nike", "Sony", "Samsung", "Adidas", "Dyson", "Bose", "Leica", "Hermès","payoneer","PayPal"];
 
 function Brands() {
   const doubled = [...brands, ...brands];
