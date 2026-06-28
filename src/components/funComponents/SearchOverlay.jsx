@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiSearch, FiX } from "react-icons/fi";
 
 
-function SearchOverlay({ isOpen, onClose }) {
+function SearchOverlay({ isOpen, onClose, onProductClick }) {
   const [query, setQuery] = useState("");
   const results = query.length > 1 ? products.filter(p => p.name.toLowerCase().includes(query.toLowerCase())) : [];
   return (
@@ -25,7 +25,12 @@ function SearchOverlay({ isOpen, onClose }) {
             {results.length > 0 && (
               <div className="max-h-72 overflow-y-auto divide-y divide-gray-50">
                 {results.map(p => (
-                  <div key={p.id} onClick={onClose} className="flex items-center gap-3 px-5 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
+                  <div 
+                  key={p.id} onClick={()=>{
+                    onProductClick(p);
+                    onClose();
+                  }} 
+                  className="flex items-center gap-3 px-5 py-3 hover:bg-gray-50 cursor-pointer transition-colors">
                     <img src={p.image} alt={p.name} className="w-10 h-10 rounded-lg object-cover" />
                     <div><p className="text-sm font-medium text-gray-900">{p.name}</p><p className="text-xs text-gray-400">{p.category} · ${p.price}</p></div>
                   </div>

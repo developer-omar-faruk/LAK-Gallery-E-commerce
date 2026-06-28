@@ -55,7 +55,7 @@ function App() {
       <AnimatePresence>
         {selectedProduct && <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} onAddToCart={addToCart} />}
       </AnimatePresence>
-      <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+      <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} onProductClick={setSelectedProduct} />
     </div>
   );
 }
