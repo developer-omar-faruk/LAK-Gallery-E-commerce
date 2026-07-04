@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { FiArrowRight, FiZap } from "react-icons/fi";
 
 
-function Hero({ onShopClick }) {
+function Hero({ onShopClick, onView }) {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-[#f5f4f0]">
       <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "linear-gradient(#d1cfc8 1px,transparent 1px),linear-gradient(90deg,#d1cfc8 1px,transparent 1px)", backgroundSize: "40px 40px" }} />
@@ -41,11 +41,11 @@ function Hero({ onShopClick }) {
           </div>
           <div className="relative h-[480px] lg:h-[560px]">
             {[
-              { img: products[0].image, name: products[0].name, price: `$${products[0].price}`, top: "0%", left: "5%", delay: 0 },
-              { img: products[2].image, name: products[2].name, price: `$${products[2].price}`, top: "15%", left: "52%", delay: 0.15 },
-              { img: products[6].image, name: products[6].name, price: `$${products[6].price}`, top: "54%", left: "20%", delay: 0.3 },
+              { img: products[0].image, num: 0, name: products[0].name, price: `$${products[0].price}`, top: "0%", left: "5%", delay: 0 },
+              { img: products[2].image, num: 2, name: products[2].name, price: `$${products[2].price}`, top: "15%", left: "52%", delay: 0.15 },
+              { img: products[6].image, num: 6, name: products[6].name, price: `$${products[6].price}`, top: "54%", left: "20%", delay: 0.3 },
             ].map((card, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}
+              <motion.div onClick={() => onView(products[card.num])} key={i} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 + card.delay, ease: [0.22,1,0.36,1] }}
                 whileHover={{ y: -8, scale: 1.03 }}
                 className="absolute bg-white rounded-2xl shadow-xl overflow-hidden w-44 sm:w-52 cursor-pointer"

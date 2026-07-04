@@ -41,7 +41,8 @@ function App() {
   return (
     <div className="min-h-screen bg-white font-sans antialiased">
       <Navbar cartCount={cartCount} onCartOpen={() => setCartOpen(true)} onSearchOpen={() => setSearchOpen(true)} />
-      <Hero onShopClick={() => document.getElementById("featured")?.scrollIntoView({ behavior: "smooth" })} />
+      <Hero onShopClick={() => document.getElementById("featured")?.scrollIntoView({ behavior: "smooth" })}
+      onView={setSelectedProduct} />
       <Categories />
       <FeaturedProducts onAddToCart={addToCart} onView={setSelectedProduct} />
       <TrendingProducts onAddToCart={addToCart} onView={setSelectedProduct} />
