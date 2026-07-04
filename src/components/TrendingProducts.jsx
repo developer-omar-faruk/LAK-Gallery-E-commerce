@@ -25,7 +25,7 @@ function TrendingProducts({ onAddToCart, onView }) {
       </div>
       <div ref={scrollRef} className="flex gap-5 overflow-x-auto pb-2" style={{ scrollSnapType: "x mandatory", msOverflowStyle: "none", scrollbarWidth: "none" }}>
         {trendingProducts.map((p, i) => (
-          <div key={p.id} style={{ scrollSnapAlign: "start", minWidth: "260px" }} className="flex-shrink-0">
+          <div key={p.id} style={{ scrollSnapAlign: "start", minWidth: "260px" }} className="md:flex-shrink-0">
             <ProductCard product={p} onAddToCart={onAddToCart} onView={onView} i={i} />
           </div>
         ))}
