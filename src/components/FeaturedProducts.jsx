@@ -11,7 +11,7 @@ import {
 
 
 // ─── FEATURED PRODUCTS ────────────────────────────────────────────────────────
-function FeaturedProducts({ onAddToCart, onView }) {
+function FeaturedProducts() {
   return (
     <Section id="featured" className="bg-[#f5f4f0]">
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
@@ -21,7 +21,7 @@ function FeaturedProducts({ onAddToCart, onView }) {
         </motion.a>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {products.map((p, i) => <ProductCard key={p.id} product={p} onAddToCart={onAddToCart} onView={onView} i={i} />)}
+        {products.map((p, i) => <ProductCard key={p.id} product={p} i={i} />)}
       </div>
     </Section>
   );

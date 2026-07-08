@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 
-function TrendingProducts({ onAddToCart, onView }) {
+function TrendingProducts() {
   const scrollRef = useRef(null);
   const scroll = dir => scrollRef.current?.scrollBy({ left: dir * 280, behavior: "smooth" });
   return (
@@ -26,7 +26,7 @@ function TrendingProducts({ onAddToCart, onView }) {
       <div ref={scrollRef} className="flex gap-5 overflow-x-auto pb-2" style={{ scrollSnapType: "x mandatory", msOverflowStyle: "none", scrollbarWidth: "none" }}>
         {trendingProducts.map((p, i) => (
           <div key={p.id} style={{ scrollSnapAlign: "start", minWidth: "260px" }} className="md:flex-shrink-0">
-            <ProductCard product={p} onAddToCart={onAddToCart} onView={onView} i={i} />
+            <ProductCard product={p} i={i} />
           </div>
         ))}
       </div>

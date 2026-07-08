@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
 import Navbar from "./components/Navbar";
@@ -15,6 +15,8 @@ import Footer from "./components/Footer";
 import CartDrawer from "./components/funComponents/CartDrawer";
 import ProductModal from "./components/funComponents/ProductModal";
 import SearchOverlay from "./components/funComponents/SearchOverlay";
+
+export const CartAndViewContext= createContext()
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -44,8 +46,12 @@ function App() {
       <Hero onShopClick={() => document.getElementById("featured")?.scrollIntoView({ behavior: "smooth" })}
       onView={setSelectedProduct} />
       <Categories />
-      <FeaturedProducts onAddToCart={addToCart} onView={setSelectedProduct} />
-      <TrendingProducts onAddToCart={addToCart} onView={setSelectedProduct} />
+
+      <CartAndViewContext value={{addToCart, setSelectedProduct}}>
+        <FeaturedProducts/>
+        <TrendingProducts/>
+      </CartAndViewContext>
+      
       <WhyUs />
       <Testimonials />
       <Brands />
